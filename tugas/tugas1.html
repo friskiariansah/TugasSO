@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Penjadwalan Disk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Materi Penjadwalan Disk</h1>
+        
+        <h2>Pengenalan</h2>
+        <p>Penjadwalan disk merupakan salah satu bagian penting dalam sistem operasi untuk mengatur permintaan baca/tulis pada hard disk agar proses berjalan lebih efisien.</p>
+
+        <h2>Tujuan Penjadwalan Disk</h2>
+        <ul>
+            <li>Meminimalkan waktu akses (seek time).</li>
+            <li>Meningkatkan efisiensi penggunaan disk.</li>
+            <li>Mengurangi waktu tunggu (waiting time) proses.</li>
+        </ul>
+
+        <h2>Algoritma Penjadwalan Disk</h2>
+        <ol>
+            <li><strong>FCFS (First Come First Serve):</strong> Melayani permintaan berdasarkan urutan kedatangan.</li>
+            <li><strong>SSTF (Shortest Seek Time First):</strong> Melayani permintaan dengan jarak kepala disk terdekat.</li>
+            <li><strong>SCAN:</strong> Kepala disk bergerak bolak-balik seperti elevator.</li>
+            <li><strong>CSCAN (Circular SCAN):</strong> Kepala disk kembali ke awal setelah mencapai ujung.</li>
+            <li><strong>LOOK:</strong> Seperti SCAN, tetapi berhenti saat tidak ada permintaan di arah tersebut.</li>
+            <li><strong>C-LOOK:</strong> Seperti CSCAN, tetapi langsung ke permintaan paling kecil setelah mencapai batas.</li>
+        </ol>
+
+        <h2>Kesimpulan</h2>
+        <p>Pemilihan algoritma penjadwalan disk yang tepat dapat mempengaruhi kinerja sistem secara keseluruhan tergantung pada beban kerja sistem.</p>
+
+        <a href="../index.html" class="back-button">Kembali ke Halaman Utama</a>
+    </div>
+</body>
+</html>

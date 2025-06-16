@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Penjadwalan Disk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1>Materi Penjadwalan Disk</h1>
+
+        <h2>1. PTPD</h2>
+        <p>Penjadwalan disk merupakan salah satu bagian penting dalam sistem operasi untuk mengatur permintaan
+            baca/tulis pada hard disk agar proses berjalan lebih efisien.</p>
+        <table>
+            <tr>
+                <th colspan="6" class="header-atas">PTPD</th>
+            </tr>
+            <tr>
+                <th>P</th>
+                <th>TB</th>
+                <th>LP</th>
+                <th>SM</th>
+                <th>SR</th>
+                <th>LT</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9</td>
+                <td>12</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>5</td>
+                <td>7</td>
+                <td>12</td>
+                <td>19</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>7</td>
+                <td>3</td>
+                <td>19</td>
+                <td>20</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>11</td>
+                <td>10</td>
+                <td>12</td>
+                <td>31</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>15</td>
+                <td>6</td>
+                <td>31</td>
+                <td>37</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>18</td>
+                <td>4</td>
+                <td>37</td>
+                <td>41</td>
+                <td>37</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="5">TOTAL</td>
+                <td>127,0</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="5">RERATA</td>
+                <td>18,1</td>
+            </tr>
+        </table>
+        <h2>2. PTD (SJF)</h2>
+        <table>
+            <tr>
+                <th colspan="6" class="header-atas">PTD (SJF)</th>
+            </tr>
+            <tr>
+                <th>P</th>
+                <th>TB</th>
+                <th>LP</th>
+                <th>SM</th>
+                <th>SR</th>
+                <th>LT</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9</td>
+                <td>12</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>5</td>
+                <td>7</td>
+                <td>15</td>
+                <td>23</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>7</td>
+                <td>3</td>
+                <td>12</td>
+                <td>15</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>11</td>
+                <td>10</td>
+                <td>33</td>
+                <td>43</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>15</td>
+                <td>6</td>
+                <td>23</td>
+                <td>29</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>18</td>
+                <td>4</td>
+                <td>29</td>
+                <td>33</td>
+                <td>29</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="5">TOTAL</td>
+                <td>122,0</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="5">RERATA</td>
+                <td>17,4</td>
+            </tr>
+        </table>
+        <h2>3. PTDP</h2>
+        <table>
+            <tr>
+                <th colspan="6" class="header-atas">PTDP</th>
+            </tr>
+            <tr>
+                <th>P</th>
+                <th>TB</th>
+                <th>LP</th>
+                <th>SM</th>
+                <th>SR</th>
+                <th>LT</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+                <td>2</td>
+                <td>-7</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>2</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>5</td>
+                <td>7</td>
+                <td>15</td>
+                <td>22</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>7</td>
+                <td>3</td>
+                <td>12</td>
+                <td>15</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>11</td>
+                <td>10</td>
+                <td>31</td>
+                <td>41</td>
+                <td>31</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>15</td>
+                <td>6</td>
+                <td>26</td>
+                <td>31</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>18</td>
+                <td>4</td>
+                <td>22</td>
+                <td>26</td>
+                <td>22</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="5">TOTAL</td>
+                <td>100,0</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="5">RERATA</td>
+                <td>14,3</td>
+            </tr>
+        </table>
+        
+
+    
+        <h2>4. RPTD </h2>
+        <table>
+            <tr>
+                <th colspan="6" class="header-atas">RPTD</th>
+            </tr>
+            <tr>
+                <th>P</th>
+                <th>TB</th>
+                <th>LP</th>
+                <th>SM</th>
+                <th>SR</th>
+                <th>LT</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9</td>
+                <td>12</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>5</td>
+                <td>7</td>
+                <td>19</td>
+                <td>26</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>7</td>
+                <td>3</td>
+                <td>12</td>
+                <td>15</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>11</td>
+                <td>10</td>
+                <td>32</td>
+                <td>42</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>15</td>
+                <td>6</td>
+                <td>26</td>
+                <td>32</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>18</td>
+                <td>4</td>
+                <td>15</td>
+                <td>19</td>
+                <td>15</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="5">TOTAL</td>
+                <td>113,0</td>
+            </tr>
+            <tr class="total-row">
+                <td colspan="5">RERATA</td>
+                <td>16,1</td>
+            </tr>
+        </table>
+        <h2>tabel rasio penalty</h2>
+        <table>
+            <tr>
+                <th>TS</th>
+                <th>RP</th>
+                <th>TS</th>
+                <th>RP</th>
+                <th>TS</th>
+                <th>RP</th>
+                <th>TS</th>
+                <th>RP</th>
+                <th>TS</th>
+                <th>RP</th>
+                <th>TS</th>
+                <th>RP</th>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="highlight">3,333333</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>1,571429</td>
+                <td class="highlight">7</td>
+                <td>2</td>
+                <td class="highlight">10</td>
+                <td>2,428571</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>1,666667</td>
+                <td>5</td>
+                <td class="highlight">2,666667</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>-2</td>
+                <td>0,8</td>
+                <td>1</td>
+                <td>1,1</td>
+                <td>4</td>
+                <td>1,4</td>
+                <td class="highlight">4</td>
+                <td>1,4</td>
+                <td class="highlight">27</td>
+                <td>3,7</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>-6</td>
+                <td>0</td>
+                <td>-3</td>
+                <td>0,5</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+                <td>24</td>
+                <td>5</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>-9</td>
+                <td></td>
+                <td>-6</td>
+                <td>-0,5</td>
+                <td>-3</td>
+                <td>0,25</td>
+                <td>-3</td>
+                <td>0,25</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <blockquote><p><strong> keterangan:</strong></p>
+        <p>Penjadwalan Berurutan Sesuai Rasio Penalty Terbesar</p>
+        <li>TS = Saat Rampung - Saat Tiba</li>
+        <li>RP = TS - Lama Proses</li>
+        <li>TS : Waktu Sia-Sia</li>
+        <li>RP : Rasio Penalty</li></blockquote>
+        <h2>5. RRQ2</h2>
+        <table>
+            <tr>
+                <th>P</th>
+                <th>TB</th>
+                <th>LP</th>
+                <th>SM</th>
+                <th>SR</th>
+                <th>LT</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+                <td>2</td>
+                <td>-7</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>2</td>
+                <td>3</td>
+                <td>2</td>
+                <td>7</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>5</td>
+                <td>7</td>
+                <td>8</td>
+                <td>24</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>7</td>
+                <td>3</td>
+                <td>12</td>
+                <td>19</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>11</td>
+                <td>10</td>
+                <td>21</td>
+                <td>38</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>15</td>
+                <td>6</td>
+                <td>27</td>
+                <td>39</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>18</td>
+                <td>4</td>
+                <td>36</td>
+                <td>42</td>
+                <td>36</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">TOTAL</td>
+                <td>129,0</td>
+            </tr>
+            <tr class="rata">
+                <td colspan="5">RERATA</td>
+                <td>18,4</td>
+            </tr>
+        </table>
+        <h2> RRQ3 </h2>
+        <table>
+            <tr>
+                <th>P</th>
+                <th>TB</th>
+                <th>LP</th>
+                <th>SM</th>
+                <th>SR</th>
+                <th>LT</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>0</td>
+                <td>9</td>
+                <td>0</td>
+                <td>15</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>2</td>
+                <td>3</td>
+                <td>3</td>
+                <td>6</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>5</td>
+                <td>7</td>
+                <td>9</td>
+                <td>23</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>7</td>
+                <td>3</td>
+                <td>15</td>
+                <td>21</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td>11</td>
+                <td>10</td>
+                <td>21</td>
+                <td>42</td>
+                <td>32</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>15</td>
+                <td>6</td>
+                <td>26</td>
+                <td>38</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>18</td>
+                <td>4</td>
+                <td>30</td>
+                <td>39</td>
+                <td>35</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">TOTAL</td>
+                <td>142,0</td>
+            </tr>
+            <tr class="rata">
+                <td colspan="5">RERATA</td>
+                <td>20,3</td>
+            </tr>
+        </table>
+        <h2> RRQ4 </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="7">RR Q4</th>
+                </tr>
+                <tr>
+                    <th>P</th>
+                    <th>TB</th>
+                    <th>LP</th>
+                    <th>SM</th>
+                    <th>SR</th>
+                    <th>LT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>0</td>
+                    <td>9</td>
+                    <td>0</td>
+                    <td>23</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>7</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>7</td>
+                    <td>22</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>16</td>
+                    <td>19</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>12</td>
+                    <td>42</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>15</td>
+                    <td>6</td>
+                    <td>27</td>
+                    <td>41</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>18</td>
+                    <td>4</td>
+                    <td>31</td>
+                    <td>35</td>
+                    <td>31</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">TOTAL</td>
+                    <td>147,0</td>
+                </tr>
+                <tr>
+                    <td colspan="5">RERATA</td>
+                    <td>21,0</td>
+                </tr>
+            </tfoot>
+        </table>
+        <h2> RRQ5 </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6">RR&nbsp;Q5</th>
+                </tr>
+                <tr>
+                    <th>P</th>
+                    <th>TB</th>
+                    <th>LP</th>
+                    <th>SM</th>
+                    <th>SR</th>
+                    <th>LT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A</td>
+                    <td>0</td>
+                    <td>9</td>
+                    <td>0</td>
+                    <td>14</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>8</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>5</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>23</td>
+                    <td>16</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>7</td>
+                    <td>3</td>
+                    <td>15</td>
+                    <td>18</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>E</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>18</td>
+                    <td>42</td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>15</td>
+                    <td>6</td>
+                    <td>26</td>
+                    <td>37</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>G</td>
+                    <td>18</td>
+                    <td>4</td>
+                    <td>37</td>
+                    <td>41</td>
+                    <td>37</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">TOTAL</td>
+                    <td>141,0</td>
+                </tr>
+                <tr>
+                    <td colspan="5">RERATA</td>
+                    <td>20,1</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+
+
+        
+
+        <a href="../index.html" class="back-button">Kembali ke Halaman Utama</a>
+    </div>
+</body>
+
+</html>
