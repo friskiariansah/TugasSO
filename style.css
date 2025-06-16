@@ -611,15 +611,18 @@ footer .container .link-container .navigation ul li a {
   }
 }
 
+/* Desktop super besar (ultrawide monitor) */
 @media screen and (max-width: 1536px) {
   footer .container {
     gap: 2rem;
   }
+
   footer .container .link-container {
     gap: 2rem;
   }
 }
 
+/* Laptop dan Tablet Landscape */
 @media screen and (max-width: 1024px) {
   header nav,
   header .extra-nav {
@@ -648,7 +651,6 @@ footer .container .link-container .navigation ul li a {
 
   header .mobile-nav.show {
     transform: translateY(0);
-    transition: all 0.2s linear;
   }
 
   header .mobile-nav .close {
@@ -679,14 +681,14 @@ footer .container .link-container .navigation ul li a {
     cursor: pointer;
     position: relative;
     list-style: none;
-    width: 25%;
+    width: 40%;
   }
 
   header .mobile-nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 28px;
     transition: 0.3s linear;
   }
 
@@ -700,7 +702,6 @@ footer .container .link-container .navigation ul li a {
 
   header .mobile-nav ul li:hover .nav-link::after {
     width: 100%;
-    transition: 0.3s linear;
   }
 
   footer .container .link-container .information ul li::after,
@@ -710,19 +711,27 @@ footer .container .link-container .navigation ul li a {
   }
 }
 
+/* Tablet & Smartphone Medium */
 @media screen and (max-width: 768px) {
   header .mobile-nav ul li {
-    width: 35%;
+    width: 60%;
   }
 
   footer .container {
     padding: 1rem 2rem;
+    flex-direction: column;
+    align-items: center;
   }
+
   footer .container .profile {
-    width: 50%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
   }
+
   footer .container .link-container {
     flex-direction: column;
+    align-items: center;
     width: 100%;
   }
 
@@ -733,6 +742,7 @@ footer .container .link-container .navigation ul li a {
   }
 }
 
+/* Smartphone Kecil */
 @media screen and (max-width: 610px) {
   footer .container .profile,
   footer .container .link-container {
@@ -742,18 +752,25 @@ footer .container .link-container .navigation ul li a {
   footer .container .link-container .information,
   footer .container .link-container .resource,
   footer .container .link-container .navigation {
-    width: 30%;
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
   }
 }
 
+/* HP Mini / iPhone SE */
 @media screen and (max-width: 450px) {
   header .mobile-nav ul li {
-    width: 50%;
+    width: 70%;
+  }
+
+  header .mobile-nav ul li a {
+    font-size: 24px;
   }
 
   footer .container .link-container .information,
   footer .container .link-container .resource,
   footer .container .link-container .navigation {
-    width: 50%;
+    width: 100%;
   }
 }
